@@ -1,7 +1,9 @@
-import { useState } from "react"
-import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai"
-import { Link } from "react-router-dom"
-import OAuth from "../components/OAuth"
+import { useState } from "react";
+import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
+import { Link, useNavigate } from "react-router-dom";
+import OAuth from "../components/OAuth";
+import { signInWithEmailAndPassword, getAuth } from "firebase/auth";
+import { toast } from "react-toastify";
 
 export default function SignIn() {
   const [showPassword, setShowPassword] = useState(false)
